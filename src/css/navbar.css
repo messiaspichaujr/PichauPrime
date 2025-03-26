@@ -7,7 +7,6 @@
     align-items: center;
     padding: 15px 5%;
     position: relative;
-    flex-wrap: wrap;
 }
 
 .logo {
@@ -57,6 +56,10 @@
 
 /* Estilos para mobile */
 @media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
     .nav-links {
         width: 100%;
         flex-direction: column;
@@ -66,6 +69,7 @@
         opacity: 0;
         padding: 0;
         transition: max-height 0.5s ease, opacity 0.4s ease 0.1s;
+        text-align: center;
     }
 
     .nav-links.active {
