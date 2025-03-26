@@ -23,6 +23,7 @@
     border-radius: 10px;
     text-align: center;
     padding: 2rem;
+    max-width: 26rem;
     gap: 1rem;
 }
 
@@ -34,6 +35,7 @@
     border-radius: 10px;
     text-align: center;
     padding: 2rem;
+    max-width: 26rem;
     gap: 1.4rem;
 }
 
@@ -187,6 +189,13 @@
 
     .cards-faq {
         flex-direction: column;
+    }
+    .card-item {
+        max-width: 100%;
+    }
+    
+    .card2-item {
+        max-width: 100%;
     }
 }
 

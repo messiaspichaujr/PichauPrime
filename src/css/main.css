@@ -1,3 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 :root {
     --bg1: url('https://hotsite.pichau.com.br/pichaugaming/ClubePichau/cp1.jpg');
     --bg2: #fff;
@@ -70,6 +80,7 @@
 
 .spec2-bg1 img {
     max-width: 80%;
+    margin-top: 12rem;
 }
 
 @media screen and (max-width: 839px) {
@@ -80,6 +91,10 @@
 
     .spec1-bg1 p {
         font-size: 1.8rem;
+    }
+    .spec2-bg1 img {
+        max-width: 80%;
+        margin-top: 2rem;
     }
 }
 
