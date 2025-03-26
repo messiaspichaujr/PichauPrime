@@ -1,0 +1,432 @@
+:root {
+    --bg1: url('https://hotsite.pichau.com.br/pichaugaming/ClubePichau/cp1.jpg');
+    --bg2: #fff;
+    --bg3: #c20e1a;
+    --bg4: #000;
+    --bg5: url('https://hotsite.pichau.com.br/pichaugaming/ClubePichau/cp14.jpg');
+
+    --cor-letra-branca: #fff;
+    --cor-letra-fundo: #564fb5;
+    --cor-letra-black: #000;
+}
+
+/*BG-1*/
+
+#bg-1 {
+    width: 100%;
+    height: auto;
+    background-image: var(--bg1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--cor-letra-branca);
+}
+
+.container-bg1 {
+    display: flex;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.spec1-bg1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.spec1-bg1 p {
+    font-size: 2.4rem;
+    line-height: 3rem;
+}
+
+.spec1-bg1 img {
+    max-width: 50%;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+        /* Posição inicial */
+    }
+
+    50% {
+        transform: translateY(-15px);
+        /* Movimento para cima */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Retorna para a posição inicial */
+    }
+}
+
+.spec2-bg1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spec2-bg1 img {
+    max-width: 80%;
+}
+
+@media screen and (max-width: 839px) {
+    .container-bg1 {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .spec1-bg1 p {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .spec1-bg1 img {
+        max-width: 80%;
+    }    
+}
+
+@media screen and (max-width: 350px) {
+    .spec1-bg1 p {
+        font-size: 1.4rem;
+    }    
+}
+
+/*BG-2*/
+
+#bg-2 {
+    background-color: var(--bg2);
+}
+
+#bg-2-2 {
+    display: none;
+}
+
+.container-bg2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2rem;
+    gap: 2rem;
+}
+
+.spec1-bg2 {
+    text-align: center;
+    margin: 20px;
+}
+
+.spec1-bg2 img {
+    transition: transform 0.3s ease;
+}
+
+.spec1-bg2:hover img {
+    transform: translateY(-10px);
+}
+
+.spec1-bg2 .tam-p {
+    font-size: 1.4rem;
+    color: #333;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.spec1-bg2:hover .tam-p {
+    color: #000;
+}
+
+@media screen and (max-width: 1107px) {
+
+    #bg-2 {
+        display: none;
+    }
+
+    #bg-2-2 {
+        display: block;
+    }
+
+    .container-bg2 {
+        padding: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 664px) {
+
+    #bg-2 {
+        display: block;
+    }
+
+    .container-bg2 {
+        flex-direction: column;
+    }
+
+    #bg-2-2 {
+        display: none;
+    }
+
+}
+
+/*BG-3*/
+
+#bg-3 {
+    background-color: var(--bg3);
+}
+
+.container-bg3 {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.spec1-bg3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spec1-bg3 img {
+    max-width: 100%;
+    margin-top: -4rem;
+}
+
+.spec2-bg3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.spec2-bg3 img {
+    max-width: 100%;
+}
+
+.button2 {
+    border-radius: 6px;
+    position: relative;
+    padding: 1rem 2rem;
+    background-color: #6e0007;
+    font-size: 1.8rem;
+    border: 2px solid #6e0007;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s, border-color 0.3s;
+    margin-top: 2rem;
+}
+
+.button2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #c20e1a;
+    transition: left 0.3s;
+    z-index: 0;
+}
+
+.button2:hover::before {
+    left: 0;
+}
+
+.button2:hover {
+    border-color: #fff;
+}
+
+.button2 span {
+    position: relative;
+    z-index: 1;
+}
+
+.button2 a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
+
+@media screen and (max-width: 1320px) {
+    .spec2-bg3 img {
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width: 839px) {
+    .container-bg3 {
+        flex-direction: column-reverse;
+        gap: 4rem;
+    }
+
+    .spec1-bg3 img {
+        max-width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .spec2-bg3 img {
+        max-width: 80%;
+    }
+
+    .button2 {
+        padding: 10px 1.6rem;
+        font-size: 1.2rem;
+    }
+}
+
+/*BG-4*/
+
+#bg-4 {
+    background-color: var(--bg4);
+    color: var(--cor-letra-branca);
+    padding: 2rem;
+}
+
+.text-bg4 {
+    text-align: center;
+    padding: 2em;
+}
+
+.text-bg4 p {
+    font-size: 2em;
+}
+
+.text3-bg4 {
+    font-size: 3rem;
+    letter-spacing: 1.4rem;
+}
+
+.text4-bg4 {
+    font-size: 3rem;
+    color: #e30514;
+}
+
+.text5-bg4 {
+    padding: 0 0 0 20rem;
+}
+
+.desc-bg4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.desc-bg4 img {
+    max-width: 100%;
+}
+
+.asset-bg4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.asset-bg4 img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+    .text-bg4 p {
+        font-size: 2em;
+    }
+
+    .text3-bg4 {
+        font-size: 2rem;
+        letter-spacing: 1.4rem;
+    }
+
+    .text4-bg4 {
+        font-size: 2rem;
+        color: #e30514;
+    }
+
+    .text5-bg4 {
+        padding: 0 0 0 10rem;
+    }
+}
+
+/*BG-5*/
+
+#bg-5 {
+    width: 100%;
+    height: auto;
+    background-image: var(--bg5);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--cor-letra-branca);
+}
+
+.container-bg5 {
+    display: flex;
+}
+
+.desc-bg5 {
+    padding: 8rem 4rem 0 4rem;
+}
+
+.asset-bg5 {
+    max-width: 80%;
+    margin-top: -2rem;
+}
+
+.asset1-bg5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text1-bg5 {
+    line-height: 3rem;
+    font-size: 4rem;
+}
+
+.asset2-bg5 {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 1550px) {
+    .asset2-bg5{
+        max-width: 60%;
+    }
+    .desc-bg5 {
+        padding: 4rem 4rem 0 4rem;
+    }
+    .text1-bg5 {
+        line-height: 3rem;
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .asset-bg5 {
+        margin-top: 0;
+    }
+    .desc-bg5 {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .asset-bg5 {
+        max-width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 839px) {
+    .container-bg5 {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .text1-bg5 {
+        font-size: 2rem;
+    }
+}

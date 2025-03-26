@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.block {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.block {
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
+section {
+    opacity: 0;
+    transform: translateX(-100px); 
+    transition: all 0.6s ease-in-out;
+  }
+  
+  section.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  

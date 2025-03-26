@@ -1,0 +1,237 @@
+#card-carrossel {
+    background: #4c4743;
+}
+
+#body-two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-card {
+    padding: 4rem 2rem 0 2rem;
+}
+
+.text-card p {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.container-two {
+    position: relative;
+    height: 450px;
+    width: 1075px;
+    display: flex;
+    align-items: center;
+}
+
+.swiper {
+    width: 950px;
+}
+
+.card {
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    height: 400px;
+    margin: 20px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+}
+
+.card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    z-index: 100;
+}
+
+.container-two .card .image {
+    height: 160px;
+}
+
+.container-two .card .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 3px solid #fff;
+}
+
+.card .media-icons {
+    position: absolute;
+    top: 12px;
+    right: 95px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card .media-icons i {
+    color: #c20e1a;
+    opacity: 0.6;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.card .media-icons i:hover {
+    opacity: 1;
+}
+
+.card .name-profession {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    color: #000;
+}
+
+.name-profession .name {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #c20e1a;
+}
+
+.name-profession .profession {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card .rating {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.card .rating i {
+    font-size: 18px;
+    margin: 0 2px;
+    color: #c20e1a;
+}
+
+.card .buttonn {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card .buttonn {
+    background: #c20e1a;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 8px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.clube-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clube-card img {
+    margin-top: 2rem;
+    max-width: 60%;
+}
+
+.buttonn buttonn:hover {
+    background: #c20e1a;
+}
+
+.swiper-pagination {
+    position: absolute;
+    top: 450px;
+}
+
+.swiper-pagination-bullet {
+    height: 7px;
+    width: 26px;
+    border-radius: 25px;
+    background: #fff !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    opacity: 0.7;
+    color: #fff !important;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    opacity: 1;
+    color: #fff;
+}
+
+@media screen and (max-width: 1020px) {
+    .swiper {
+        width: 700px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+
+    .swiper-slide {
+        width: calc(50% - 20px);
+        /* 2 slides visíveis */
+    }
+
+    .swiper-pagination {
+        bottom: 5px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .swiper {
+        width: 300px;
+    }
+
+    .swiper-slide {
+        width: 100% !important;
+        /* Apenas 1 slide visível */
+    }
+
+    .swiper-pagination {
+        bottom: 0px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .swiper {
+        width: 200px;
+    }
+
+    .container-two .card .image img {
+        height: 70%;
+    }
+}
