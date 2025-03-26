@@ -64,7 +64,7 @@
 .container-two .card .image img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border: 3px solid #fff;
 }
 
