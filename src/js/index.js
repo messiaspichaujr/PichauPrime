@@ -74,24 +74,73 @@ document.addEventListener('DOMContentLoaded', () => {
       window.addEventListener('scroll', checkSections);
   }
 
-  // Configuração do Swiper (se existir)
-  if (document.querySelector('.mySwiper')) {
-      new Swiper(".mySwiper", {
-          slidesPerView: 3,
-          spaceBetween: 30,
-          slidesPerGroup: 3,
-          loop: true,
-          loopFillGroupWithBlank: true,
-          pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-          },
-          navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-          },
-      });
-  }
+//   // Configuração do Swiper (se existir)
+//   if (document.querySelector('.mySwiper')) {
+//       new Swiper(".mySwiper", {
+//           slidesPerView: 3,
+//           spaceBetween: 30,
+//           slidesPerGroup: 3,
+//           loop: true,
+//           loopFillGroupWithBlank: true,
+//           pagination: {
+//               el: ".swiper-pagination",
+//               clickable: true,
+//           },
+//           navigation: {
+//               nextEl: ".swiper-button-next",
+//               prevEl: ".swiper-button-prev",
+//           },
+//       });
+//   }
+
+/////////////////// SLIDES DE PRODUTOS EM PROMOÇÃO ///////////////////
+let directionForward = true;
+
+const swiperDestaques = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: false,
+    breakpoints: {
+        768: {
+            slidesPerView: 3
+        },
+        992: {
+            slidesPerView: 3
+        }
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+    },
+    navigation: {
+        nextEl: ".swiper-button-next ",
+        prevEl: ".swiper-button-prev"
+    },
+    on: {
+        slideChange: function() {
+            const swiper = this;
+            const totalSlides = swiper.slides.length;
+            const visibleSlides = swiper.params.slidesPerView;
+
+            // Quando chegar ao último slide visível
+            if (swiper.activeIndex + visibleSlides >= totalSlides && directionForward) {
+                directionForward = false;
+                swiper.params.autoplay.reverseDirection = true;
+                swiper.autoplay.stop();
+                swiper.autoplay.start();
+            }
+
+            // Quando voltar ao primeiro slide
+            if (swiper.activeIndex === 0 && !directionForward) {
+                directionForward = true;
+                swiper.params.autoplay.reverseDirection = false;
+                swiper.autoplay.stop();
+                swiper.autoplay.start();
+            }
+        }
+    }
+
+});
 
   // FAQ - Mostrar/esconder respostas
   const containers = document.querySelectorAll('.container');

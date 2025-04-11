@@ -203,6 +203,7 @@
 
     #faq {
         padding: 2rem;
+        margin-top: -1px;
     }
 
     .text-faq {
